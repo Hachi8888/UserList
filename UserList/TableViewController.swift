@@ -54,8 +54,8 @@ class TableViewController: UITableViewController {
     // 自分
     let Hirata = "あだなは、はち(本名:なな)で、東京にくるたびにハチ公に挨拶しています。弾丸ひとり旅など、突然思い立ったことをやるのが好きです。東京生活わくわくしています〜"
     
-    // ★それぞれの趣味欄を定数を使って配列で記載する
-    let hobbies: [Any] = [Yurikochan, Yuichan, Kaorin, Nagaisan, Nakamurasan, Horitasan, Shigasan, Wanmesan, Fukuzawasan, Toyookasan, Onosan, Kanadasan, Tauchisan, Hirata]
+//    // ★それぞれの趣味欄を定数を使って配列で記載する
+//    let hobbies: [Any] = [Yurikochan, Yuichan, Kaorin, Nagaisan, Nakamurasan, Horitasan, Shigasan, Wanmesan, Fukuzawasan, Toyookasan, Onosan, Kanadasan, Tauchisan, Hirata]
     
     
     
