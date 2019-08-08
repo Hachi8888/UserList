@@ -10,54 +10,7 @@ import UIKit
 
 class UserListTableViewController: UITableViewController {
     
-        // ★それぞれの趣味欄を定数化する
-        
-        // ゆりこちゃん
-        let Yurikochan: String = "あだ名はゆりちゃん。22歳女。好きなことはピアノと麻雀とバレエ。基本的にインドアで引きこもって家でゲームをしていることが多い。夜になると街を徘徊することも多く、その時はお酒を大量に浴びている。次の日に、飲み過ぎだと後悔するけど、繰り返してしまうおバカさんです。"
-        
-        // ゆいちゃん
-        let Yuichan: String = "ゲームが大好き。特にドラクエをこよなく愛しており、2018年の夏休みは約200時間をドラクエに費やした。他にもピアノや海外旅行や読書など様々な趣味がある。"
-        
-        // かおりん
-        let Kaorin: String = "あだ名はかおりん。18歳 女\n好きなことは旅行と遊び\n友達と遊ぶことが好きです!!カラオケとかめっちゃ行きますwww"
-        
-        // 永井さん
-        let Nagaisan: String = "音楽が好き。ビジュアル系バンドが好きでバンドを組んでギターを弾いたりした。最近の趣味はバイクに乗ることとキックボクシング。"
-        
-        // 中村さん
-        let Nakamurasan: String = "サッカー、カラオケ、旅行、食事、飲酒等基本楽しければなんでもいい。ポンコツという自負を持っている"
-        
-        // 堀田さん
-        let Horitasan: String = "エレキベースが趣味。高校1年からロックを中心に音楽活動を始める。初めはASIAN KUNG -FUGENERATIONや東京事変などを好みとしていた。大学からは一変し、フュージョンを中心に演奏活動をする。Pat Metheny Group やスナーキー・パピーが好き。"
-        
-        // 志賀さん
-        let Shigasan: String = "バレーボール、サッカー、バスケと運動が全般的に好きです！海外旅行などに最近ハマり、特にほかのアジア圏の国への旅行をいっぱいしてみたいです！あと料理も好きです！"
-        
-        // 分目さん
-        let Wanmesan: String = "卓球とランニングが好きです。世界のいろいろな国に行ってみたいです。最近は、フィリピンに行って大好きになりました。"
-        
-        // 福澤さん
-        let Fukuzawasan: String = "サッカー好きの脳筋です。今の趣味はバイトすること週6でみんな大好きcoffee mafiaで働いてますよ!いつでもおいで"
-        
-        // 豊岡さん
-        let Toyookasan: String = "バックカントリースキーしてみたい！美味しいものたくさん食べたい！スキューバダイビングしたい！深夜特急読みながら同じところ旅したい！"
-        
-        // 小野さん
-        let Onosan: String = "スポーツをすることと釣りが好きです！サッカーと水泳をやっていました"
-        
-        // 金田さん
-        let Kanadasan = "小学校二年生から高校3年生までサッカーをしていて、今も趣味でフットサルをしています。最近はキックボクシングジムに通い始めましたが、細身になりたいので筋トレはあまりしないようにしています。ライブハウスに音楽を聞きに行くことが好きで、5個上の兄と一緒にライブやフェスに行くことがあります。"
-        
-        // 田内さん
-        let Tauchisan = "普段は、読書か散歩かアニメを見て過ごしてます！あと最近は筋トレにもハマりかけています"
-        
-        // 自分
-        let Hirata = "あだなは、はち(本名:なな)で、東京にくるたびにハチ公に挨拶しています。弾丸ひとり旅など、突然思い立ったことをやるのが好きです。東京生活わくわくしています〜"
-        
-        // ★それぞれの趣味欄を定数を使って配列で記載する
-        let hobbies: [String] = [ Yurikochan, Yuichan, Kaorin, Nagaisan, Nakamurasan, Horitasan, Shigasan, Wanmesan, Fukuzawasan, Toyookasan, Onosan, Kanadasan, Tauchisan, Hirata]
-        
-        
+       
         
         
         
@@ -65,20 +18,20 @@ class UserListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    // 【必須】セクションの数:今回は2個(名前欄と趣味欄)なので、return 2
+    // 【必須】セクションの数:今回は1個(名前欄のみ)なので、return 1 ??
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     
-    // 【必須】セクション内に表示する行数
+    // 【必須】セクション内に表示する行数 :名前欄と趣味欄で書く1行ずつなので return 1 ??
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 1
     }
 
-    
+    // セルを表示される処理:Identifierの設定を忘れない!
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
 
