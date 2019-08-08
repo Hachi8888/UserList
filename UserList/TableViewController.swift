@@ -75,18 +75,20 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
+      // 【必須】セクションの数:今回は2個(名前欄と趣味欄)なので、return 2 であっているのか。。
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    // 【必須】セクションの数:今回は2個(名前欄と趣味欄)なので、return 2 であっているのか。。
+  // 【必須】セクション内に表示する行数 :名前欄と趣味欄で書く1行ずつなので return 1 ??
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
 
-    /*
+  // セルを表示せる処理:Identifierの設定を忘れない!
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -94,7 +96,7 @@ class TableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
