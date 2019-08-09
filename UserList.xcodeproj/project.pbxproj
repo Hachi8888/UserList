@@ -12,7 +12,7 @@
 		D11A185E22FAC45400B50EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11A185D22FAC45400B50EEF /* Assets.xcassets */; };
 		D11A186122FAC45400B50EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11A185F22FAC45400B50EEF /* LaunchScreen.storyboard */; };
 		D11A186922FBAE3E00B50EEF /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11A186822FBAE3E00B50EEF /* UserListTableViewController.swift */; };
-		D11A186B22FBCBE400B50EEF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11A186A22FBCBE400B50EEF /* TableViewController.swift */; };
+		D11A188B22FC410700B50EEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11A188A22FC410700B50EEF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		D11A186022FAC45400B50EEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D11A186222FAC45400B50EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11A186822FBAE3E00B50EEF /* UserListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
-		D11A186A22FBCBE400B50EEF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D11A188A22FC410700B50EEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				D11A185F22FAC45400B50EEF /* LaunchScreen.storyboard */,
 				D11A186222FAC45400B50EEF /* Info.plist */,
 				D11A186822FBAE3E00B50EEF /* UserListTableViewController.swift */,
-				D11A186A22FBCBE400B50EEF /* TableViewController.swift */,
+				D11A188A22FC410700B50EEF /* DetailViewController.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11A188B22FC410700B50EEF /* DetailViewController.swift in Sources */,
 				D11A186922FBAE3E00B50EEF /* UserListTableViewController.swift in Sources */,
-				D11A186B22FBCBE400B50EEF /* TableViewController.swift in Sources */,
 				D11A185722FAC45300B50EEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
