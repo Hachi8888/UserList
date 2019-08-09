@@ -47,7 +47,7 @@ class UserListTableViewController: UIViewController {
     
   
   // ボタンを押されたときの処理
-  // 永井さんのボタンのみの紐付けでOK ?
+  // 永井さんのボタンをまず紐付けした。その他13人も同じボタンのアクションに紐付け可!!
     
     
     @IBAction func buttons(_ sender: UIButton) {
@@ -65,7 +65,7 @@ class UserListTableViewController: UIViewController {
     
     
     
-    // segue遷移前動作
+    // segue遷移前動作(performSegue()が実行したら行われる処理)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "ShowDataCell" , let vc = segue.destination as? DetailViewController else {
             
