@@ -47,20 +47,22 @@ class UserListTableViewController: UIViewController {
     
   
   // ボタンを押されたときの処理
+  // 永井さんのボタンのみの紐付けでOK ?
     
-    @IBAction func ButtonToSend(_ sender: UIButton) {
+    
+    @IBAction func buttons(_ sender: UIButton) {
         
         // 押された人のタグ番号をもとにname,hobbyの辞書からデータをと取得し、変数に格納する
         
         sendName = name[sender.tag]
         sendHobby = hobby[sender.tag]
         
-        
-        // セグエで値を渡す
-        // セグエイできめた遷移先の名前を入れる　遷移先の指定
+        // 遷移先の識別子の指定
         performSegue(withIdentifier: "ShowDataCell", sender: nil)
-        
     }
+    
+
+    
     
     
     // segue遷移前動作
