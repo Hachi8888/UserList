@@ -38,14 +38,6 @@ class UserListTableViewController: UIViewController {
         
     ]
     
-    // 遷移先にわたすデータを格納する変数を定義
-    
-    var sendName: String = name[sender.tag]
-    var sendHobby: String = hobby[sender.tag]
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,36 +45,34 @@ class UserListTableViewController: UIViewController {
     }
     
     
+  
+  // ボタンを押されたときの処理
+    
+    @IBAction func ButtonToSend(_ sender: UIButton) {
+        
+        // 押された人のタグ番号をもとにname,hobbyの辞書からデータをと取得し、変数に格納する
+        
+        sendName = name[sender.tag]
+        sendHobby = hobby[sender.tag]
+        
+        
+        // セグエで値を渡す
+        // セグエイできめた遷移先の名前を入れる　遷移先の指定
+        performSegue(withIdentifier: "ShowDataCell", sender: nil)
+        
+    }
+    
+    
     // segue遷移前動作
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showDetail", let vc = segue.destination as? NextViewController else { return }
+        guard segue.identifier == "ShowDataCell" , let vc = segue.destination as? DetailViewController else {
+            
+             return }
         
-        // NextViewControllerのdataNumに値を渡す
-        vc.userData = members[tagNum]
-    }
-    
-    // segue遷移前動作
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "Detail"
-    }
-    
-    
-    // ボタンのアクション
-    @IBAction func pushButton(_ sender: UIButton) {
-        // tagNumにボタンのタグをを入れる
-        tagNum = sender.tag
-        
-        // segueの実行
-        performSegue(withIdentifier: "showDetail", sender: nil)
-    }
-    
-    
-    
-    @IBAction func ButtonToSend(_ sender: Any) {
-        
+        vc.catchName = sendName
+        vc.catchHobby = sendHobby
         
     }
-    
     
     
     

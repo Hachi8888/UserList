@@ -15,16 +15,17 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var ShowHobby: UITextView!
     
-    // データを受け取る変数を定義
-    var CatchName: String
-    var CatchHobby: String
+    // 受け取ったデータを格納する変数を定義
+    var catchName: String = ""
+    var catchHobby: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 受け取ったデータをテキストに表示する
-        ShowName.text = sendName
-        showHobby.text = sendHobby
+        ShowName.text = catchName
+        ShowHobby.text = catchHobby
         
         
 

@@ -208,6 +208,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="名前が表示されます" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-qQ-WFq">
                                 <rect key="frame" x="0.0" y="85" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ShowDataCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0np-Hg-LUj"/>
                                 </constraints>
@@ -224,6 +225,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="趣味が表示されます" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lYx-lI-9cA">
                                 <rect key="frame" x="0.0" y="156" width="320" height="412"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ShowDataCell"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
