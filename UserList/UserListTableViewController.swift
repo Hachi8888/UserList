@@ -9,18 +9,14 @@
 import UIKit
 
 class UserListTableViewController: UIViewController {
-    
     // ★変数一覧
-    
     // 遷移先にわたすデータを格納する変数を定義
     var sendName: String = ""
     var sendHobby: String = ""
-    
     // ユーザーリストの名前を辞書で定義
-    var name : [String] = ["永井 優","小野 勇輔","豊岡 正紘","分目 祐太","金田 祐作","甲斐崎 香","志賀 大河","津國 由莉子","中村泰輔","堀田 真","田内翔太郎","福沢貴一","平田奈那","吉澤優衣"]
-    
+    let name : [String] = ["永井 優","小野 勇輔","豊岡 正紘","分目 祐太","金田 祐作","甲斐崎 香","志賀 大河","津國 由莉子","中村泰輔","堀田 真","田内翔太郎","福沢貴一","平田奈那","吉澤優衣"]
     // ユーザーデータに表示する趣味を辞書で定義
-    var hobby : [String] = [
+    let hobby : [String] = [
         "音楽が好き。ビジュアル系バンドが好きでバンドを組んでギターを弾いたりした。最近の趣味はバイクに乗ることとキックボクシング。",
         "スポーツをすることと釣りが好きです！サッカーと水泳をやっていました",
         "バックカントリースキーしてみたい！美味しいものたくさん食べたい！スキューバダイビングしたい！深夜特急読みながら同じところ旅したい！",
@@ -38,46 +34,28 @@ class UserListTableViewController: UIViewController {
         
     ]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
-  
-  // ボタンを押されたときの処理
-  // 永井さんのボタンをまず紐付けした。その他13人も同じボタンのアクションに紐付け可!!
-    
-    
+    // ボタンを押されたときの処理
+    // 永井さんのボタンをまず紐付けした。その他13人も同じボタンのアクションに紐付け可!!
     @IBAction func buttons(_ sender: UIButton) {
-        
         // 押された人のタグ番号をもとにname,hobbyの辞書からデータをと取得し、変数に格納する
-        
         sendName = name[sender.tag]
         sendHobby = hobby[sender.tag]
-        
         // 遷移先の識別子の指定
         performSegue(withIdentifier: "ShowDataCell", sender: nil)
     }
     
-
-    
-    
-    
     // segue遷移前動作(performSegue()が実行したら行われる処理)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "ShowDataCell" , let vc = segue.destination as? DetailViewController else {
-            
-             return }
-        
+            return }
         vc.catchName = sendName
         vc.catchHobby = sendHobby
-        
     }
-    
-    
-    
 }
 
 
